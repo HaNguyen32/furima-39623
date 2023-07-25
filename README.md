@@ -42,7 +42,7 @@ oders
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
 | user               | references | null: false, foreign_key: true |
-| items              | references | null: false, foreign_key: true |
+| item               | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :item
@@ -58,6 +58,6 @@ oders
 | house_number         | interger     | null: flase                    |
 | buiding_name         | string       |                                |
 | phone_number         | string       | null: false                    | 
-| oder                 | references   | null: false                    |
+| order                | references   | null: false, foreign_key: true |                   |
 ### Association
 - belongs_to :order
