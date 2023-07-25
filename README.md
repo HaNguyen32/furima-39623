@@ -54,6 +54,7 @@ oders
 | postal_code          | integer      | null: false                    |
 | prefecture           | integ        | null: false                    |
 | city                 | string       | null: false                    |
+| house_number         | interger     | null: flase                    |
 | buiding_name         | string       |                                |
 | phone_number         | interger     | null: false                    | 
 
