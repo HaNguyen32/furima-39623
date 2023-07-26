@@ -27,7 +27,7 @@
 | category_id             | integer      | null: false                    |
 | product_condition_id    | integer      | null: false                    |
 | shipping_cost_id        | integer      | null: false                    | 
-| shipping_source_area_id | integer      | null: false                    |
+| prefecture_id           | integer      | null: false                    |
 | shipping_time_id        | integer      | null: false                    |
 | cost                    | integer      | null: false                    |
 | user                    | references   | null: false foreign_key: true  |
@@ -35,18 +35,17 @@
 
 ### Association
 - belongs_to :user
-- has_many :order
+- has_one :order
 
-oders
-## 
+## oders 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
 | user               | references | null: false, foreign_key: true |
 | item               | references | null: false, foreign_key: true |
 
 ### Association
+- has_one :address
 - belongs_to :item
-- has_many :address
 - belongs_to :user
 
 ### Addresss
@@ -55,7 +54,7 @@ oders
 | postal_code          | string       | null: false                    |
 | prefecture_id        | integer      | null: false                    |
 | city                 | string       | null: false                    |
-| house_number         | interger     | null: flase                    |
+| house_number         | string       | null: flase                    |
 | buiding_name         | string       |                                |
 | phone_number         | string       | null: false                    | 
 | order                | references   | null: false, foreign_key: true |                   |
