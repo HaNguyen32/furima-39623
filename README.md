@@ -20,17 +20,17 @@
 - has_many :items
 
 ## items
-| Column                  | Type         | Options                        |
-| ------------------------| -------------| ------------------------------ |
-| product_name            | string       | null: false                    |
-| explanation             | text         | null: false                    |
-| category_id             | integer      | null: false                    |
-| product_condition_id    | integer      | null: false                    |
-| shipping_cost_id        | integer      | null: false                    | 
-| prefecture_id           | integer      | null: false                    |
-| shipping_time_id        | integer      | null: false                    |
-| cost                    | integer      | null: false                    |
-| user                    | references   | null: false foreign_key: true  |
+| Column                        | Type         | Options                        |
+| ------------------------------| -------------| ------------------------------ |
+| name                          | string       | null: false                    |
+| info                          | text         | null: false                    |
+| category_id                   | integer      | null: false                    |
+| sales_status_id               | integer      | null: false                    |
+| shipping_fee_status_id        | integer      | null: false                    | 
+| prefecture_id                 | integer      | null: false                    |
+| scheduled_delivery_id         | integer      | null: false                    |
+| price                         | integer      | null: false                    |
+| user                          | references   | null: false foreign_key: true  |
 
 
 ### Association
