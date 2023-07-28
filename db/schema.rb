@@ -10,31 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_26_064846) do
-  create_table "items", charset: "utf8", force: :cascade do |t|
-    t.string "product_name", null: false
-    t.text "explanation", null: false
-    t.integer "category_id", null: false
-    t.integer "product_condition_id", null: false
-    t.integer "shipping_cost_id", null: false
-    t.integer "prefecture_id", null: false
-    t.integer "shipping_time_id", null: false
-    t.integer "cost", null: false
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_items_on_user_id"
-  end
-
+ActiveRecord::Schema[7.0].define(version: 2023_07_26_051653) do
   create_table "users", charset: "utf8", force: :cascade do |t|
     t.string "nick_name", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
-    t.string "first_name", null: false
     t.string "last_name", null: false
-    t.string "katagana_first_name", null: false
-    t.string "katagana_last_name", null: false
-    t.date "date_of_birth", null: false
+    t.string "first_name", null: false
+    t.string "last_name_kana", null: false
+    t.string "first_name_kana", null: false
+    t.date "date_birth", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -44,5 +29,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_26_064846) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "items", "users"
 end
