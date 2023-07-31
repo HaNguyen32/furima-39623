@@ -12,4 +12,6 @@ class User < ApplicationRecord
     validates :first_name_kana, format: { with: /\A[\p{Katakana}ー－]+\z/, message: "Input full-width Katakana characters." }
     validates :date_birth
   end
+  has_many :items
+  
 end
