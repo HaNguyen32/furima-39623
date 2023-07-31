@@ -4,7 +4,7 @@ RSpec.describe Item, type: :model do
   before do
     @item = FactoryBot.build(:item)
   end
-  
+
   describe '商品を出品する' do
     context '商品が出品できる場合' do
       it 'image, name, info, category_id, sales_status_id, shipping_fee_status_id, prefecture_id, scheduled_delivery_id, priceが存在すれば出品できる' do
@@ -21,19 +21,18 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Image can't be blank")
       end
-      
+
       it 'nameが空では出品できない' do
         @item.name = nil
         @item.valid?
         expect(@item.errors.full_messages).to include("Name can't be blank")
       end
-      
+
       it 'Infoが空では出品できない' do
         @item.info = nil
         @item.valid?
         expect(@item.errors.full_messages).to include("Info can't be blank")
       end
-
 
       it 'Categoryが空では出品できない' do
         @item.category_id = 1
@@ -74,24 +73,23 @@ RSpec.describe Item, type: :model do
       it 'Priceが300未満では出品できない' do
         @item.price = 200
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price is out of setting range")
+        expect(@item.errors.full_messages).to include('Price is out of setting range')
       end
       it 'Priceが9,999,999円を超えると出品できない' do
-        @item.price = 10000000
+        @item.price = 10_000_000
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price is out of setting range")
+        expect(@item.errors.full_messages).to include('Price is out of setting range')
       end
-
 
       it 'priceが半角数字でない場合、保存できない' do
         @item.price = 'abc'
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price is out of setting range")
+        expect(@item.errors.full_messages).to include('Price is out of setting range')
       end
       it 'userが紐付いていないと保存できない' do
         @item.user = nil
         @item.valid?
-        expect(@item.errors.full_messages).to include("User must exist")
+        expect(@item.errors.full_messages).to include('User must exist')
       end
     end
   end
