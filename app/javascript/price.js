@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
   const priceInput = document.getElementById('item-price');
   const addTaxPriceElement = document.getElementById('add-tax-price');
@@ -10,9 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
       
       
       const taxPrice = Math.floor(inputValue * taxRate);
-      addTaxPriceElement.textContent = taxPrice;
+      addTaxPriceElement.innerHTML = taxPrice;
 
       const profit = Math.floor(inputValue - taxPrice);
-      profitElement.textContent = profit;
+      profitElement.innerHTML = profit;
   })
 })
