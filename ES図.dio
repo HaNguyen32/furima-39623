@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="TQfzECb6IaOLQgD7lEZ8" name="ページ1">
-        <mxGraphModel dx="406" dy="572" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="827" dy="411" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -42,7 +42,7 @@
                 <mxCell id="13" value="address" style="swimlane;whiteSpace=wrap;html=1;fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;" parent="1" vertex="1">
                     <mxGeometry x="490" y="340" width="210" height="230" as="geometry"/>
                 </mxCell>
-                <mxCell id="14" value="&lt;ul&gt;&lt;li&gt;postal_code&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;text-align: center;&quot;&gt;prefecture_id&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;text-align: center;&quot;&gt;city&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;text-align: center;&quot;&gt;house_number&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;text-align: center;&quot;&gt;buiding_name&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;text-align: center;&quot;&gt;phone_number&lt;br&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;text-align: center;&quot;&gt;order&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" parent="13" vertex="1">
+                <mxCell id="14" value="&lt;ul&gt;&lt;li&gt;postal_code&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;text-align: center;&quot;&gt;prefecture_id&lt;/span&gt;&lt;br&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;text-align: center;&quot;&gt;city&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;text-align: center;&quot;&gt;house_number&lt;/span&gt;&lt;/li&gt;&lt;li style=&quot;text-align: center;&quot;&gt;building_name&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;text-align: center;&quot;&gt;phone_number&lt;br&gt;&lt;/span&gt;&lt;/li&gt;&lt;li&gt;&lt;span style=&quot;text-align: center;&quot;&gt;order&lt;/span&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=none;fillColor=none;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;" parent="13" vertex="1">
                     <mxGeometry x="10" y="40" width="160" height="170" as="geometry"/>
                 </mxCell>
                 <mxCell id="21" value="" style="edgeStyle=segmentEdgeStyle;endArrow=ERone;html=1;curved=0;rounded=0;endSize=8;startSize=8;strokeWidth=2;endFill=0;startArrow=ERone;startFill=0;" parent="1" edge="1">
