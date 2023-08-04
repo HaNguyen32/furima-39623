@@ -1,5 +1,7 @@
 class OrdersController < ApplicationController
     before_action :authenticate_user!, except: :index
+    before_action :move_to_item_index
+    before_action :move_to_signin
 
     def index
         gon.public_key = ENV["PAYJP_PUBLIC_KEY"]
@@ -14,6 +16,7 @@ class OrdersController < ApplicationController
         if @order_address.valid?
           pay_item
           @order_address.save
+          #@order_address.item.update(sold_out: true)
           redirect_to root_path
         else
           render :index, status: :unprocessable_entity
@@ -34,6 +37,22 @@ class OrdersController < ApplicationController
         card: order_params[:token],    # カードトークン
         currency: 'jpy'                 # 通貨の種類（日本円）
       )
+    end
+
+    def move_to_item_index
+      @item = Item.find(params[:item_id])
+      @order_address = OrderAddress.new
+      if current_user == @item.user
+        redirect_to root_path
+      elsif !@item.order.nil?
+        redirect_to root_path
+      end
+    end
+
+    def move_to_signin
+      unless user_signed_in?
+        redirect_to new_user_session_path
+      end
     end
 
 end
