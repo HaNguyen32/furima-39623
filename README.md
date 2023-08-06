@@ -37,7 +37,7 @@
 - belongs_to :user
 - has_one :order
 
-## oders 
+## orders 
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
 | user               | references | null: false, foreign_key: true |
@@ -48,14 +48,14 @@
 - belongs_to :item
 - belongs_to :user
 
-### Addresss
+### Addresses
 | Column               | Type         | Options                        |
 | ---------------------| -------------| ------------------------------ |
 | postal_code          | string       | null: false                    |
 | prefecture_id        | integer      | null: false                    |
 | city                 | string       | null: false                    |
 | house_number         | string       | null: flase                    |
-| buiding_name         | string       |                                |
+| building_name        | string       |                                |
 | phone_number         | string       | null: false                    | 
 | order                | references   | null: false, foreign_key: true |                   |
 ### Association
