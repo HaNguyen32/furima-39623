@@ -1,10 +1,8 @@
 class OrdersController < ApplicationController
-    before_action :authenticate_user!, except: :index
+    before_action :authenticate_user!
     before_action :move_to_item_index
-    before_action :move_to_signin
 
     def index
-        gon.public_key = ENV["PAYJP_PUBLIC_KEY"]
         @order_address = OrderAddress.new
     end
 
@@ -35,6 +33,7 @@ class OrdersController < ApplicationController
     end
 
     def move_to_item_index
+      gon.public_key = ENV["PAYJP_PUBLIC_KEY"]
       @item = Item.find(params[:item_id])
       if current_user == @item.user
         redirect_to root_path
@@ -43,10 +42,5 @@ class OrdersController < ApplicationController
       end
     end
 
-    def move_to_signin
-      unless user_signed_in?
-        redirect_to new_user_session_path
-      end
-    end
-
+   
 end
