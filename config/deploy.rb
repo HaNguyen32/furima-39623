@@ -2,7 +2,7 @@
 lock '~> 3.17.3'
 
 set :application, 'furima-39623'
-set :repo_url, 'git@example.com:HaNguyen32/furima-39623.git'
+set :repo_url, 'git@github.com:HaNguyen32/furima-39623.git'
 set :branch, 'main'
 
 # バージョンが変わっても共通で参照するディレクトリを指定
