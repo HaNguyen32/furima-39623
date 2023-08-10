@@ -143,10 +143,10 @@
         </div>
         <div class='item-info'>
           <h3 class='item-name'>
-            <%= link_to item.name %>
+            <%= item.name %>
           </h3>
           <div class='item-price'>
-            <span><%= link_to item.price %>円<br><%= item.shipping_fee_status.name  %></span>
+            <span><%= item.price %>円<br><%= item.shipping_fee_status.name %></span>
             <div class='star-btn'>
               <%= image_tag "star.png", class:"star-icon" %>
               <span class='star-count'>0</span>
@@ -174,8 +174,9 @@
             </div>
           </div>
         </div>
-        <% end %>
+        <%# end %>
       </li>
+      <% end %>
       <% end %>
       
     </ul>
